@@ -29,12 +29,12 @@
                 <div class="flex items-center font-bold gap-4">
                     <div>
                         <ul class="flex gap-4">
-                            <li>BERANDA</li>
-                            <li>KATALOG</li>
-                            <li>E-PUBLICATION</li>
-                            <li>GALLERY</li>
-                            <li>INFOGRAFIS</li>
-                            <li>LAINNYA</li>
+                            <li class="cursor-pointer">BERANDA</li>
+                            <li class="cursor-pointer">KATALOG</li>
+                            <li class="cursor-pointer">E-PUBLICATION</li>
+                            <li class="cursor-pointer">GALLERY</li>
+                            <li class="cursor-pointer">INFOGRAFIS</li>
+                            <li class="cursor-pointer">LAINNYA</li>
                         </ul>
                     </div>
                     <div>
