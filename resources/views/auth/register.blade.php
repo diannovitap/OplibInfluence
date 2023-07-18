@@ -42,7 +42,6 @@
 
                 <!-- Nomor Telepon -->
                 <div class="mt-3">
-                    <!-- <x-input-label for="notelepon" :value="__('Email')" /> -->
                     <x-text-input id="notelepon" class="block text-sm mt-1 w-full" type="text" name="notelepon"
                         :value="old('notelepon')" required autocomplete="notelepon" placeholder="Nomor Telepon" />
                     <x-input-error :messages="$errors->get('notelepon')" class="mt-2" />
@@ -50,7 +49,6 @@
 
                 <!-- Alamat -->
                 <div class="mt-3">
-                    <!-- <x-input-label for="alamat" :value="__('Email')" /> -->
                     <x-text-input id="alamat" class="block text-sm mt-1 w-full" type="text" name="alamat"
                         :value="old('alamat')" required autocomplete="alamat" placeholder="Alamat" />
                     <x-input-error :messages="$errors->get('alamat')" class="mt-2" />
@@ -58,27 +56,53 @@
 
                 <!-- Tipe Akun -->
                 <div class="mt-3">
-                    <select class="w-full text-sm border-gray-300 rounded-sm" name="tipemember" id="tipemember">
+                    <select onchange="tipeakun(this);" class="w-full text-sm border-gray-300 rounded-md" name="tipemember" id="tipemember">
                         <option>Pilih Tipe Member</option>
-                        <option class="hover:bg-[#FF4500]" value="Alumni Telkom University">Alumni Telkom University
-                        </option>
+                        <option value="Umum">Umum</option>
+                        <option class="hover:bg-[#FF4500]" value="Alumni Telkom University">Alumni Telkom University</option>
                         <option value="Lemdikti YPT">Lemdikti YPT</option>
                         <option value="Perguruan Tinggi Asuh">Perguruan Tinggi Asuh</option>
                     </select>
                 </div>
 
-                <!-- Email-->
-                <div class="mt-3">
-                    <!-- <x-input-label for="email" :value="__('Confirm Password')" /> -->
+                <div class="mt-3 hidden" id="institutlemdikti">
+                    <select class="w-full text-sm border-gray-300 rounded-md" name="institutlemdikti" id="institutlemdikti">
+                        <option>Pilih Institut</option>
+                        <option value="Institut Teknologi Telkom Surabaya">Institut Teknologi Telkom Surabaya</option>
+                        <option value="Institut Teknologi Telkom Jakarta">Institut Teknologi Telkom Jakarta</option>
+                        <option value="Institut Teknologi Telkom Purwokerto">Institut Teknologi Telkom Purwokerto</option>
+                    </select>
+                </div>
 
+                <div class="mt-3 hidden" id="perguruantinggi">
+                    <select class="w-full text-sm border-gray-300 rounded-md" name="perguruantinggi" id="perguruantinggi">
+                        <option>Pilih Perguruan Tinggi</option>
+                        <option value="STKIP Setia Budhi Rangkasbitung">STKIP Setia Budhi Rangkasbitung</option>
+                        <option value="STT Wastukancana Purwakarta">STT Wastukancana Purwakarta</option>
+                        <option value="Unisma Bekasi">Unisma Bekasi</option>
+                        <option value="Universitas Informastika dan Bisnis Indonesia">Universitas Informastika dan Bisnis Indonesia</option>
+                        <option value="Universitas Insan Cendekia Mandiri">Universitas Insan Cendekia Mandiri</option>
+                        <option value="Universitas Muhammadiyah Cirebon">Universitas Muhammadiyah Cirebon</option>
+                        <option value="Universitas Nadhlatul Ulama Cirebon">Universitas Nadhlatul Ulama Cirebon</option>
+                        <option value="Universitas Universitas Subang">Universitas Universitas Subang</option>
+                    </select>
+                </div>
+
+                <div class="mt-3 hidden" id="institusi">
+                    <x-text-input id="institusi" class="block text-sm mt-1 w-full" type="text" name="institusi"
+                        :value="old('institusi')" required autocomplete="institusi" placeholder="Nama Institusi" />
+                    <x-input-error :messages="$errors->get('institusi')" class="mt-2" />
+                </div>
+
+                <div class="mt-3 hidden" id="email">
                     <x-text-input id="email" class="block text-sm mt-1 w-full" type="email" name="email" required
                         autocomplete="email" placeholder="@gmail.com" />
 
                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
                 </div>
 
-                <!-- KTP -->
-                <div class="mt-3">
+
+                <div class="mt-3 hidden" id="ktp">
                     <x-input-label for="ktp" :value="__('KTP')" />
                     <div class="border-gray-300 border text-sm shadow-sm p-2 rounded-md mt-1">
                         <input class="active:border-0" name="ktp" type="file">
@@ -86,8 +110,7 @@
                     <x-input-label for="ktp" :value="__('Format : jpg, jpeg, png, pdf;  Maksimal size : 2 MB')" />
                 </div>
 
-                <!-- Ijasah -->
-                <div class="mt-3">
+                <div class="mt-3 hidden" id="ijasah">
                     <x-input-label for="ijasah" :value="__('Ijasah')" />
                     <div class="border-gray-300 border text-sm shadow-sm p-2 rounded-md mt-1">
                         <input class="active:border-0" name="ijasah" type="file">
@@ -95,10 +118,21 @@
                     <x-input-label for="ijasah" :value="__('Format : jpg, jpeg, png, pdf;  Maksimal size : 2 MB')" />
                 </div>
 
+                <div class="mt-3 hidden" id="ktm">
+                    <x-input-label for="karpeg" :value="__('Karpeg / KTM')" />
+                    <div class="border-gray-300 border text-sm shadow-sm p-2 rounded-md mt-1">
+                        <input class="active:border-0" name="karpeg" type="file">
+                    </div>
+                    <x-input-label for="karpeg" :value="__('Format : jpg, jpeg, png, pdf;  Maksimal size : 2 MB')" />
+                </div>
+
                 <div
-                    class="flex items-center gap-2 mt-3 bg-[#F5F5F5] w-7/12 pl-4 py-4 border rounded-lg border-[#938C8C]">
-                    <input name="imnotrobot" type="checkbox">
-                    <label for="imnotrobot"> I'm, not robot</label>
+                    class="flex items-center justify-between mt-3 bg-[#F5F5F5] w-7/12 px-4 py-4 border rounded-lg border-[#938C8C]">
+                    <div class="flex items-center gap-2">
+                        <input name="imnotrobot" type="checkbox">
+                        <label for="imnotrobot"> I'm, not robot</label>
+                    </div>
+                    <img src="/assets/recaptcha.png" alt="reCAPTCHA image">
                 </div>
 
                 <x-primary-button class="mt-3 w-full">
@@ -114,4 +148,42 @@
             </form>
         </div>
     </div>
+    <script>
+        function tipeakun(that) {
+            if (that.value == "Umum") {
+                document.getElementById("institusi").style.display = "block";
+                document.getElementById("ktp").style.display = "block";
+                document.getElementById("ktm").style.display = "block";
+                document.getElementById("perguruantinggi").style.display = "none";
+                document.getElementById("institutlemdikti").style.display = "none";
+                document.getElementById("ijasah").style.display = "none";
+                document.getElementById("email").style.display = "block";
+            } else if (that.value == "Alumni Telkom University") {
+                document.getElementById("ktp").style.display = "block";
+                document.getElementById("ijasah").style.display = "block";
+                document.getElementById("email").style.display = "block";
+                document.getElementById("institusi").style.display = "none";
+                document.getElementById("ktm").style.display = "none";
+                document.getElementById("institutlemdikti").style.display = "none";
+                document.getElementById("perguruantinggi").style.display = "none";
+            } else if (that.value == "Perguruan Tinggi Asuh") {
+                document.getElementById("perguruantinggi").style.display = "block";
+                document.getElementById("institutlemdikti").style.display = "none";
+                document.getElementById("institusi").style.display = "none";
+                document.getElementById("ijasah").style.display = "none";
+                document.getElementById("ktp").style.display = "block";
+                document.getElementById("ktm").style.display = "block";
+                document.getElementById("email").style.display = "block";
+            } else if (that.value == "Lemdikti YPT") {
+                document.getElementById("perguruantinggi").style.display = "none";
+                document.getElementById("ijasah").style.display = "none";
+                document.getElementById("institusi").style.display = "none";
+                document.getElementById("institutlemdikti").style.display = "block";
+                document.getElementById("ktp").style.display = "block";
+                document.getElementById("ktm").style.display = "block";
+                document.getElementById("email").style.display = "block";
+            }
+        }
+
+    </script>
 </x-guest-layout>

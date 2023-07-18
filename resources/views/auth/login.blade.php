@@ -22,11 +22,11 @@
             <form class="w-full text-sm  bg-white py-5 px-10 rounded-b-lg" method="POST" action="{{ route('login') }}">
                 @csrf
 
-                <!-- Email Address -->
+                <!-- Username -->
                 <div>
                     <x-input-label for="username" :value="__('Username / SSO')" />
                     <x-text-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')"
-                        required autofocus autocomplete="username" />
+                        required autofocus autocomplete="username sso" />
                     <x-input-error :messages="$errors->get('username')" class="mt-2" />
                 </div>
 
