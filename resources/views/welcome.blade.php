@@ -38,10 +38,12 @@
                         </ul>
                     </div>
                     <div>
-                        <button class="bg-white px-3 py-1 font-bold border-2 rounded-lg border-[#FF4500]">LOGIN</button>
+                        <a href="/login"><button class="bg-white px-3 py-1 font-bold border-2 rounded-lg border-[#FF4500]">LOGIN</button>
+                        </a>
+                        <a href="/register">
                         <button
                             class="bg-[#FF4500] text-white px-3 py-1 font-bold border-2 rounded-lg border-[#FF4500]">SIGN
-                            UP</button>
+                            UP</button></a>
                     </div>
                 </div>
             </nav>
@@ -61,7 +63,7 @@
                 <div class="flex items-center justify-between">
                     <h1 class="text-4xl font-bold text-white">KATALOG</h1>
                     <div class="flex gap-3">
-                        <div class="flex items-center bg-white rounded-md w-fit h-fit">
+                        <div class="flex items-center bg-white rounded-md w-fit h-fit px-1">
                             <input class="bg-transparent border-0 focus:ring-0 -my-1" type="text" placeholder="Search">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
                                 stroke="currentColor" class="w-6 h-6">
@@ -422,7 +424,7 @@
     </section>
 
     <footer>
-        <div class="p-8">
+        <div class="p-10">
             <h1 class="text-3xl font-bold">LOKASI PERPUSTAKAAN</h1>
 
             <div class="grid grid-cols-4 gap-3 mt-5">
