@@ -2,7 +2,7 @@
     <div class="flex bg-[#585654] w-10/12 rounded-lg p-9">
         <div class="w-1/2 flex flex-col items-center justify-center">
             <img class="w-1/2" src="/assets/login.png" alt="">
-            <p class="text-2xl font-bold text-white">Open Library <br>Telkom University</p>
+            <p class="text-2xl text-center font-bold text-white">Open Library <br>Telkom University</p>
         </div>
         <div class="w-1/2">
             <div class="flex w-full bg-white rounded-t-lg">
