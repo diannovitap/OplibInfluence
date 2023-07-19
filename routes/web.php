@@ -20,6 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/katalog', [KatalogController::class, 'index'])->name('katalog.index');
+Route::get('/katalog/detail', [KatalogController::class, 'detail'])->name('katalog.detail');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

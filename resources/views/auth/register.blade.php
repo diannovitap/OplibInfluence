@@ -18,7 +18,7 @@
                 </a>
             </div>
             <form class="w-full text-sm  bg-white py-5 px-10 rounded-b-lg" method="POST"
-                action="{{ route('register') }}">
+                action="{{ route('register') }}" enctype="multipart/form-data">
                 @csrf
 
                 <!-- Name -->
@@ -56,7 +56,7 @@
 
                 <!-- Tipe Akun -->
                 <div class="mt-3">
-                    <select onchange="tipeakun(this);" class="w-full text-sm border-gray-300 rounded-md" name="tipemember" id="tipemember">
+                    <select onchange="tipeakun(this);" class="w-full text-sm border-gray-300 rounded-md" name="tipemember" id="tipemember" required>
                         <option>Pilih Tipe Member</option>
                         <option value="Umum">Umum</option>
                         <option class="hover:bg-[#FF4500]" value="Alumni Telkom University">Alumni Telkom University</option>
@@ -67,7 +67,7 @@
 
                 <div class="mt-3 hidden" id="institutlemdikti">
                     <select class="w-full text-sm border-gray-300 rounded-md" name="institutlemdikti" id="institutlemdikti">
-                        <option>Pilih Institut</option>
+                        <option value="">Pilih Institut</option>
                         <option value="Institut Teknologi Telkom Surabaya">Institut Teknologi Telkom Surabaya</option>
                         <option value="Institut Teknologi Telkom Jakarta">Institut Teknologi Telkom Jakarta</option>
                         <option value="Institut Teknologi Telkom Purwokerto">Institut Teknologi Telkom Purwokerto</option>
@@ -76,7 +76,7 @@
 
                 <div class="mt-3 hidden" id="perguruantinggi">
                     <select class="w-full text-sm border-gray-300 rounded-md" name="perguruantinggi" id="perguruantinggi">
-                        <option>Pilih Perguruan Tinggi</option>
+                        <option value="">Pilih Perguruan Tinggi</option>
                         <option value="STKIP Setia Budhi Rangkasbitung">STKIP Setia Budhi Rangkasbitung</option>
                         <option value="STT Wastukancana Purwakarta">STT Wastukancana Purwakarta</option>
                         <option value="Unisma Bekasi">Unisma Bekasi</option>
@@ -90,12 +90,12 @@
 
                 <div class="mt-3 hidden" id="institusi">
                     <x-text-input id="institusi" class="block text-sm mt-1 w-full" type="text" name="institusi"
-                        :value="old('institusi')" required autocomplete="institusi" placeholder="Nama Institusi" />
+                        :value="old('institusi')" autocomplete="institusi" placeholder="Nama Institusi" />
                     <x-input-error :messages="$errors->get('institusi')" class="mt-2" />
                 </div>
 
                 <div class="mt-3 hidden" id="email">
-                    <x-text-input id="email" class="block text-sm mt-1 w-full" type="email" name="email" required
+                    <x-text-input id="email" class="block text-sm mt-1 w-full" type="email" name="email"
                         autocomplete="email" placeholder="@gmail.com" />
 
                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
@@ -105,7 +105,7 @@
                 <div class="mt-3 hidden" id="ktp">
                     <x-input-label for="ktp" :value="__('KTP')" />
                     <div class="border-gray-300 border text-sm shadow-sm p-2 rounded-md mt-1">
-                        <input class="active:border-0" name="ktp" type="file">
+                        <input class="active:border-0" name="ktp" type="file" value="">
                     </div>
                     <x-input-label for="ktp" :value="__('Format : jpg, jpeg, png, pdf;  Maksimal size : 2 MB')" />
                 </div>
@@ -113,7 +113,7 @@
                 <div class="mt-3 hidden" id="ijasah">
                     <x-input-label for="ijasah" :value="__('Ijasah')" />
                     <div class="border-gray-300 border text-sm shadow-sm p-2 rounded-md mt-1">
-                        <input class="active:border-0" name="ijasah" type="file">
+                        <input class="active:border-0" name="ijasah" type="file" value="">
                     </div>
                     <x-input-label for="ijasah" :value="__('Format : jpg, jpeg, png, pdf;  Maksimal size : 2 MB')" />
                 </div>
@@ -121,7 +121,7 @@
                 <div class="mt-3 hidden" id="ktm">
                     <x-input-label for="karpeg" :value="__('Karpeg / KTM')" />
                     <div class="border-gray-300 border text-sm shadow-sm p-2 rounded-md mt-1">
-                        <input class="active:border-0" name="karpeg" type="file">
+                        <input class="active:border-0" name="karpeg" type="file" value="">
                     </div>
                     <x-input-label for="karpeg" :value="__('Format : jpg, jpeg, png, pdf;  Maksimal size : 2 MB')" />
                 </div>

@@ -7,6 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('Oplib', 'Oplib') }}</title>
+    <link rel="icon" href="/assets/logo.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -14,13 +15,12 @@
 
     <!-- Scripts -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-    </style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+</style>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans text-gray-900 antialiased">
+<body class="font-inter text-gray-900 antialiased">
     <div class="h-fit min-h-screen w-full absolute flex flex-col sm:justify-center items-center bg-gray-100"
         style="background-image: url('/assets/oplib.png'); background-size: cover;">
         <div class="relative top-0 h-fit min-h-screen w-full font-inter grid place-items-center py-8" style="background-color: rgba(255, 255, 255, 0.5)">

@@ -17,6 +17,16 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('notelepon');
+            $table->string('alamat');
+            $table->string('tipemember');
+            $table->string('institutlemdikti')->nullable();
+            $table->string('perguruantinggi')->nullable();
+            $table->string('institusi')->nullable();
+            $table->string('imnotrobot');
+            $table->string('ktp')->nullable();
+            $table->string('karpeg')->nullable();
+            $table->string('ijasah')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

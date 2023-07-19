@@ -8,16 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" href="/assets/logo.png">
     @vite('resources/css/app.css')
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+    </style>
 </head>
+
 
 <body class="font-inter">
     <section class="h-screen bg-no-repeat bg-center"
         style="background-image: url('/assets/oplib.png'); background-color: rgba(255, 255, 255, 0.7); background-size: cover;">
 
-        <div class="absolute top-o h-screen w-full" style="background-color: rgba(255, 255, 255, 0.5)">
-
-            <nav class="flex justify-between items-center py-2 px-3">
+        <div class="absolute top-0 h-screen w-full" style="background-color: rgba(255, 255, 255, 0.5)">
+            @include('layouts.navigation')
+            <!-- <nav class="flex justify-between items-center py-2 px-3">
                 <div class="flex items-center">
                     <div>
                         <img src="/assets/logo.png" alt="">
@@ -46,7 +51,7 @@
                             UP</button></a>
                     </div>
                 </div>
-            </nav>
+            </nav> -->
             <div class="text-right absolute top-1/2 right-24 font-bold">
                 <h1 class="text-6xl font-bold text-white">BUDAYAKAN <br><span class="text-transparent"
                         style="  -webkit-text-stroke: 1px #FF4500;">MEMBACA</span></h1>
@@ -129,7 +134,7 @@
                             <p>Tersedia 1 koleksi</p>
                             <p class="text-[#07559F]">Tersedia 1 file download</p>
                         </div>
-                        <a href="{{ route('katalog.index') }}">
+                        <a href="{{ route('katalog.detail') }}">
                             <button class="py-1 px-7 border-2 border-[#07559F] rounded-md mt-2">Detail</button>
                         </a>
                     </div>
@@ -185,7 +190,9 @@
                             <p>Tersedia 1 koleksi</p>
                             <p class="text-[#07559F]">Tersedia 1 file download</p>
                         </div>
-                        <button class="py-1 px-7 border-2 border-[#07559F] rounded-md mt-2">Detail</button>
+                        <a href="{{ route('katalog.detail') }}">
+                            <button class="py-1 px-7 border-2 border-[#07559F] rounded-md mt-2">Detail</button>
+                        </a>
                     </div>
                 </div>
                 <div class="flex gap-3 bg-white px-3 py-7 rounded-md">
@@ -239,7 +246,9 @@
                             <p>Tersedia 1 koleksi</p>
                             <p class="text-[#07559F]">Tersedia 1 file download</p>
                         </div>
-                        <button class="py-1 px-7 border-2 border-[#07559F] rounded-md mt-2">Detail</button>
+                        <a href="{{ route('katalog.detail') }}">
+                            <button class="py-1 px-7 border-2 border-[#07559F] rounded-md mt-2">Detail</button>
+                        </a>
                     </div>
                 </div>
                 <div class="flex gap-3 bg-white px-3 py-7 rounded-md">
@@ -293,7 +302,9 @@
                             <p>Tersedia 1 koleksi</p>
                             <p class="text-[#07559F]">Tersedia 1 file download</p>
                         </div>
-                        <button class="py-1 px-7 border-2 border-[#07559F] rounded-md mt-2">Detail</button>
+                        <a href="{{ route('katalog.detail') }}">
+                            <button class="py-1 px-7 border-2 border-[#07559F] rounded-md mt-2">Detail</button>
+                        </a>
                     </div>
                 </div>
                 <div class="flex gap-3 bg-white px-3 py-7 rounded-md">
@@ -347,7 +358,9 @@
                             <p>Tersedia 1 koleksi</p>
                             <p class="text-[#07559F]">Tersedia 1 file download</p>
                         </div>
-                        <button class="py-1 px-7 border-2 border-[#07559F] rounded-md mt-2">Detail</button>
+                        <a href="{{ route('katalog.detail') }}">
+                            <button class="py-1 px-7 border-2 border-[#07559F] rounded-md mt-2">Detail</button>
+                        </a>
                     </div>
                 </div>
                 <div class="flex gap-3 bg-white px-3 py-7 rounded-md">
@@ -401,7 +414,9 @@
                             <p>Tersedia 1 koleksi</p>
                             <p class="text-[#07559F]">Tersedia 1 file download</p>
                         </div>
-                        <button class="py-1 px-7 border-2 border-[#07559F] rounded-md mt-2">Detail</button>
+                        <a href="{{ route('katalog.detail') }}">
+                            <button class="py-1 px-7 border-2 border-[#07559F] rounded-md mt-2">Detail</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -425,116 +440,7 @@
         </div>
     </section>
 
-    <footer>
-        <div class="p-10">
-            <h1 class="text-3xl font-bold">LOKASI PERPUSTAKAAN</h1>
-
-            <div class="grid grid-cols-4 gap-3 mt-5">
-                <div class="relative h-60">
-                    <div>
-                        <h1 class="font-bold">TelU - Gedung Manterawu Lantai 5</h1>
-                        <p>Jl. Telekomunikasi - Ters. Buah Batu Bandung 40257 Indonesia</p>
-                        <div class="flex items-center gap-2">
-                            <img src="/assets/telephone.png" alt="">
-                            <p>081280000110</p>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <img src="/assets/print.png" alt="">
-                            <p>+6222 756 5929</p>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <img src="/assets/email.png" alt="">
-                            <p>library@telkomuniversity.ac.id; bebas pustaka : bebaspustaka@telkomuniversity.ac.id</p>
-                        </div>
-                    </div>
-                    <div class="absolute bottom-0 flex gap-2">
-                        <img src="/assets/clock.png" alt="">
-                        <p>Senin - Jumat 08.00 - 19.30</p>
-                    </div>
-                </div>
-                <div class="relative h-60">
-                    <div>
-
-                        <h1 class="font-bold">TelU - Kampus Geger Kalong</h1>
-                        <p>Jl. Geger Kalong No. 1 Bandung Indonesia</p>
-                        <div class="flex items-center gap-2">
-                            <img src="/assets/telephone.png" alt="">
-                            <p>081280000110</p>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <img src="/assets/print.png" alt="">
-                            <p>+6222 756 5929</p>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <img src="/assets/email.png" alt="">
-                            <p>library@telkomuniversity.ac.id; bebas pustaka : bebaspustaka@telkomuniversity.ac.id</p>
-                        </div>
-                    </div>
-                    <div class="absolute bottom-0 flex gap-2">
-                        <img src="/assets/clock.png" alt="">
-                        <p>Senin - Jumat 08.00 - 19.30</p>
-                    </div>
-                </div>
-                <div class="relative h-60">
-                    <div>
-
-                        <h1 class="font-bold">TUKJ - Kampus A</h1>
-                        <p>Jalan Daan Mogot KM.11, RT.1/RW.4, Kedaung Kali Angke, Cengkareng, RT.1/RW.4, Kedaung Kali Angke, Kecamatan Cengkareng, Kota Jakarta Barat, DKI Jakarta</p>
-                        <div class="flex items-center gap-2">
-                            <img src="/assets/telephone.png" alt="">
-                            <p>(021)-545-1697</p>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <img src="/assets/print.png" alt="">
-                            <p>(021)-545-1697</p>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <img src="/assets/email.png" alt="">
-                            <p>libraryjkt@telkomuniversity.ac.id</p>
-                        </div>
-                    </div>
-                    <div class="absolute bottom-0 flex gap-2">
-                        <img src="/assets/clock.png" alt="">
-                        <p>Senin - Jumat 08.00 - 19.30</p>
-                    </div>
-                </div>
-                <div class="relative h-60">
-                    <div>
-
-                        <h1 class="font-bold">TUKJ - Kampus B</h1>
-                        <p>Jalan Halimun Raya Nomor 2A, RT 010, RW 006, Kelurahan Guntur, Kecamatan Setiabudi, Kota Jakarta Selatan, Provinsi DKI Jakarta</p>
-                        <div class="flex items-center gap-2">
-                            <img src="/assets/telephone.png" alt="">
-                            <p>(021)-545-1697</p>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <img src="/assets/print.png" alt="">
-                            <p>(021)-545-1697</p>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <img src="/assets/email.png" alt="">
-                            <p>libraryjkt@telkomuniversity.ac.id</p>
-                        </div>
-                    </div>
-                    <div class="absolute bottom-0 flex gap-2">
-                        <img src="/assets/clock.png" alt="">
-                        <p>Senin - Jumat 08.00 - 19.30</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flex items-center gap-3 w-fit mx-auto mt-8">
-                <img src="/assets/logotelu.png" alt="">
-                <div class="font-bold leading-tight text-lg">
-                    <p>Telkom University</p>
-                    <p>Open Library</p>
-                    <p>NPP : 3204122D0000002</p>
-                </div>
-            </div>
-        </div>
-        <div class="bg-[#F0AD4E]">
-            <h1 class="flex items-center justify-center text-2xl font-bold text-white" style="height: 10vh;">Copyright@2023 - Telkom University Open Library</h1>
-        </div>
-    </footer>
+    @include('layouts.footer')
 </body>
 
 </html>
