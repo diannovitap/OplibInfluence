@@ -129,7 +129,9 @@
                             <p>Tersedia 1 koleksi</p>
                             <p class="text-[#07559F]">Tersedia 1 file download</p>
                         </div>
-                        <button class="py-1 px-7 border-2 border-[#07559F] rounded-md mt-2">Detail</button>
+                        <a href="{{ route('katalog.index') }}">
+                            <button class="py-1 px-7 border-2 border-[#07559F] rounded-md mt-2">Detail</button>
+                        </a>
                     </div>
                 </div>
                 <div class="flex gap-3 bg-white px-3 py-7 rounded-md">
