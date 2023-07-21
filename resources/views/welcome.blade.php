@@ -26,36 +26,6 @@
 
         <div class="absolute top-0 h-screen w-full" style="background-color: rgba(255, 255, 255, 0.5)">
             @include('layouts.navigation')
-            <!-- <nav class="flex justify-between items-center py-2 px-3">
-                <div class="flex items-center">
-                    <div>
-                        <img src="/assets/logo.png" alt="">
-                    </div>
-                    <div>
-                        <img src="/assets/logotitle.png" alt="">
-                    </div>
-                </div>
-                <div class="flex items-center font-bold gap-4">
-                    <div>
-                        <ul class="flex gap-4">
-                            <li class="cursor-pointer">BERANDA</li>
-                            <li class="cursor-pointer">KATALOG</li>
-                            <li class="cursor-pointer">E-PUBLICATION</li>
-                            <li class="cursor-pointer">GALLERY</li>
-                            <li class="cursor-pointer">INFOGRAFIS</li>
-                            <li class="cursor-pointer">LAINNYA</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <a href="/login"><button class="bg-white px-3 py-1 font-bold border-2 rounded-lg border-[#FF4500]">LOGIN</button>
-                        </a>
-                        <a href="/register">
-                        <button
-                            class="bg-[#FF4500] text-white px-3 py-1 font-bold border-2 rounded-lg border-[#FF4500]">SIGN
-                            UP</button></a>
-                    </div>
-                </div>
-            </nav> -->
             <div class="text-right absolute top-1/2 right-24 font-bold">
                 <h1 class="text-6xl font-bold text-white">BUDAYAKAN <br><span class="text-transparent"
                         style="  -webkit-text-stroke: 1px #FF4500;">MEMBACA</span></h1>
