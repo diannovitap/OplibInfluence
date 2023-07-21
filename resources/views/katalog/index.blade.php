@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="p-10">
+    <div class="p-16">
         <div class="">
             <h1 class="text-3xl font-bold">KATALOG</h1>
             <p class="text-[#FF4500]"><a href="/">Beranda</a> <span class="text-[#585654]">/</span> <a
@@ -17,7 +17,173 @@
                                 d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                         </svg>
                     </div>
-                    <button class="bg-[#FF4500] text-white px-2 py-1 rounded-md h-fit">Advance Search</button>
+                    <button data-modal-target="staticModal" data-modal-toggle="staticModal"
+                        class="bg-[#FF4500] text-white px-2 py-1 rounded-md h-fit">Advance Search</button>
+
+                    <!-- Main modal -->
+                    <div id="staticModal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true"
+                        class="fixed top-0 left-0 right-0 z-50 hidden  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative w-full max-w-2xl max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow">
+                                <!-- Modal header -->
+                                <div
+                                    class="flex items-start justify-between p-4 rounded-t dark:border-gray-600">
+                                    <h3 class="text-xl font-semibold text-center text-gray-900">
+                                        Pencarian Detail Katalog
+                                    </h3>
+                                    <button type="button"
+                                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                        data-modal-hide="staticModal">
+                                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                        </svg>
+                                        <span class="sr-only">Close modal</span>
+                                    </button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="p-6 space-y-6">
+                                    <form action="">
+                                        <div class="">
+                                            <x-input-label class="font-bold" for="jeniskatalog"
+                                                :value="__('Jenis Katalog')" />
+
+                                            <select class="w-full text-sm rounded-md border border-[#F0AD4E]"
+                                                name="jeniskatalog" id="jeniskatalog">
+                                                <option value="">Pilih Jenis Katalog</option>
+                                                <option value="Institut Teknologi Telkom Surabaya">Institut Teknologi
+                                                    Telkom Surabaya</option>
+                                                <option value="Institut Teknologi Telkom Jakarta">Institut Teknologi
+                                                    Telkom Jakarta</option>
+                                                <option value="Institut Teknologi Telkom Purwokerto">Institut Teknologi
+                                                    Telkom Purwokerto</option>
+                                            </select>
+                                        </div>
+                                        <div class="mt-2">
+                                            <x-input-label class="font-bold" for="nokatalog"
+                                                :value="__('No. Katalog')" />
+                                            <input id="nokatalog"
+                                                class="block text-sm mt-1 w-full border border-[#F0AD4E] rounded-md"
+                                                type="text" name="nokatalog" :value="old('nokatalog')" required
+                                                autofocus autocomplete="nokatalog" placeholder="No. Katalog" />
+                                            <x-input-error :messages="$errors->get('nokatalog')" class="mt-2" />
+                                        </div>
+                                        <div class="mt-2">
+                                            <x-input-label class="font-bold" for="judulkatalog"
+                                                :value="__('Judul Katalog')" />
+                                            <input id="judulkatalog"
+                                                class="block text-sm mt-1 w-full border border-[#F0AD4E] rounded-md"
+                                                type="text" name="judulkatalog" :value="old('judulkatalog')" required
+                                                autofocus autocomplete="judulkatalog" placeholder="Judul Katalog" />
+                                            <x-input-error :messages="$errors->get('nokatalog')" class="mt-2" />
+                                        </div>
+                                        <div class="mt-2">
+                                            <x-input-label class="font-bold" for="pengarang" :value="__('Pengarang')" />
+                                            <input id="pengarang"
+                                                class="block text-sm mt-1 w-full border border-[#F0AD4E] rounded-md"
+                                                type="text" name="pengarang" :value="old('pengarang')" required
+                                                autofocus autocomplete="pengarang" placeholder="Username" />
+                                            <x-input-error :messages="$errors->get('pengarang')" class="mt-2" />
+                                        </div>
+                                        <div class="mt-2">
+                                            <x-input-label class="font-bold" for="penerbit" :value="__('Peneribit')" />
+                                            <input id="penerbit"
+                                                class="block text-sm mt-1 w-full border border-[#F0AD4E] rounded-md"
+                                                type="text" name="penerbit" :value="old('penerbit')" required autofocus
+                                                autocomplete="penerbit" placeholder="Username" />
+                                            <x-input-error :messages="$errors->get('penerbit')" class="mt-2" />
+                                        </div>
+                                        <div class="mt-2">
+                                            <x-input-label class="font-bold" for="penyuntingan"
+                                                :value="__('Penyunting/Pembimbing')" />
+                                            <input id="penyuntingan"
+                                                class="block text-sm mt-1 w-full border border-[#F0AD4E] rounded-md"
+                                                type="text" name="penyuntingan" :value="old('penyuntingan')" required
+                                                autofocus autocomplete="penyuntingan"
+                                                placeholder="Nama Penyunting / Nama Pembimbing" />
+                                            <x-input-error :messages="$errors->get('penyuntingan')" class="mt-2" />
+                                        </div>
+                                        <div class="mt-2">
+                                            <x-input-label class="font-bold" for="Subjek" :value="__('Subjek')" />
+                                            <input id="Subjek"
+                                                class="block text-sm mt-1 w-full border border-[#F0AD4E] rounded-md"
+                                                type="text" name="Subjek" :value="old('Subjek')" required autofocus
+                                                autocomplete="Subjek" placeholder="Username" />
+                                            <x-input-error :messages="$errors->get('Subjek')" class="mt-2" />
+                                        </div>
+                                        <div class="mt-2">
+                                            <x-input-label class="font-bold" for="=kodeklarifikasi"
+                                                :value="__('Kode Klasifikasi')" />
+                                            <input id="=kodeklarifikasi"
+                                                class="block text-sm mt-1 w-full border border-[#F0AD4E] rounded-md"
+                                                type="text" name="=kodeklarifikasi" :value="old('=kodeklarifikasi')"
+                                                required autofocus autocomplete="=kodeklarifikasi"
+                                                placeholder="Kode Klasifikasi Katalog" />
+                                            <x-input-error :messages="$errors->get('=kodeklarifikasi')" class="mt-2" />
+                                        </div>
+                                        <div class="mt-2">
+                                            <x-input-label class="font-bold" for="lokasi" :value="__('Lokasi')" />
+
+                                            <select class="w-full text-sm rounded-md border border-[#F0AD4E]"
+                                                name="lokasi" id="lokasi">
+                                                <option value="">Lokasi</option>
+                                                <option value="Bandung">Bandung</option>
+                                                <option value="Jakarta">Jakarta</option>
+                                                <option value="Purwokerto">Purwokerto</option>
+                                            </select>
+                                        </div>
+                                        <x-input-label class="font-bold mt-1" for="lokasi" :value="__('Tanggal Masuk')" />
+                                        <div class="mt-2 flex justify-between">
+                                            <div class="">
+                                            <x-input-label class="font-bold" for="lokasi" :value="__('Dari :')" />
+                                                <div class="relative max-w-sm">
+                                                    <!-- <x-input-label class="font-bold" for="lokasi" :value="__('Dari :')" /> -->
+                                                    <div
+                                                    class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none mt-1">
+                                                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                                    fill="currentColor" viewBox="0 0 20 20">
+                                                        <path
+                                                            d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                                    </svg>
+                                                </div>
+                                                <input datepicker type="text"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
+                                                    placeholder="Select date">
+                                                </div>
+                                            </div>
+                                            <div class="">
+                                            <x-input-label class="font-bold" for="lokasi" :value="__('Sampai :')" />
+
+                                                <div class="relative max-w-sm">
+                                                    <!-- <x-input-label class="font-bold" for="lokasi" :value="__('Sampai :')" /> -->
+                                                <div
+                                                    class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none mt-1">
+                                                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path
+                                                            d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                                    </svg>
+                                                </div>
+                                                <input datepicker type="text"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
+                                                    placeholder="Select date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flex justify-end gap-7 mt-3">
+                                            <button class="border border-[#FF4500] py-2 px-4 rounded-md">Bersihkan</button>
+                                            <button class="bg-[#FF4500] py-2 px-8 text-white rounded-md">Cari</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div
                     class="bg-white border w-fit border-[#0E9302] flex items-center gap-2 h-fit font-bold py-1 px-2 rounded-md">

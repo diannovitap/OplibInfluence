@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="p-10">
+    <div class="p-16">
         <div class="">
             <h1 class="text-3xl font-bold">KATALOG</h1>
             <p class="text-[#FF4500]"><a href="/">Beranda</a> <span class="text-[#585654]">/</span> <a href="{{ route('katalog.index') }}">Katalog</a>  <span
