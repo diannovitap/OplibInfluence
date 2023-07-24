@@ -1,58 +1,40 @@
 <x-app-layout>
     <div class="p-16">
         <div>
-            <h1 class="text-3xl font-bold">GALLERY</h1>
+            <h1 class="text-3xl font-bold">INFOGRAFIS</h1>
             <p class="text-[#FF4500]"><a href="/">Beranda</a> <span class="text-[#585654]">/</span> <a
-                    href="{{ route('gallery.index') }}">Gallery</a></p>
+                    href="{{ route('infografis.index') }}">Infografis</a></p>
         </div>
-        <div>
-            <h1 class="text-2xl font-bold text-center">Gallery Open Library</h1>
-            <div class="grid grid-cols-3 gap-10 mt-10">
-                <div class="bg-[#F0AD4E] flex flex-col items-center justify-center py-5">
-                    <p class="text-center mb-1">Area Loker</p>
-                    <img src="/assets/galeri1.png" alt="Photo of Gallery">
-                </div>
-                <div class="bg-[#F0AD4E] flex flex-col items-center justify-center py-5">
-                    <p class="text-center mb-1">Area Alun-Alun</p>
-                    <img src="/assets/galeri2.png" alt="Photo of Gallery">
-                </div>
-                <div class="bg-[#F0AD4E] flex flex-col items-center justify-center py-5">
-                    <p class="text-center mb-1">Area Diskusi</p>
-                    <img src="/assets/galeri3.png" alt="Photo of Gallery">
-                </div>
-                <div class="bg-[#F0AD4E] flex flex-col items-center justify-center py-5">
-                    <p class="text-center mb-1">Mini Studio</p>
-                    <img src="/assets/galeri4.png" alt="Photo of Gallery">
-                </div>
-                <div class="bg-[#F0AD4E] flex flex-col items-center justify-center py-5">
-                    <p class="text-center mb-1">Digital Reading Area</p>
-                    <img src="/assets/galeri5.png" alt="Photo of Gallery">
-                </div>
-                <div class="bg-[#F0AD4E] flex flex-col items-center justify-center py-5">
-                    <p class="text-center mb-1">Collaboration Research</p>
-                    <img src="/assets/galeri6.png" alt="Photo of Gallery">
-                </div>
-                <div class="bg-[#F0AD4E] flex flex-col items-center justify-center py-5">
-                    <p class="text-center mb-1">Kunjungan Asesor IABEE</p>
-                    <img src="/assets/galeri7.png" alt="Photo of Gallery">
-                </div>
-                <div class="bg-[#F0AD4E] flex flex-col items-center justify-center py-5">
-                    <p class="text-center mb-1">Open House</p>
-                    <img src="/assets/galeri8.png" alt="Photo of Gallery">
-                </div>
-                <div class="bg-[#F0AD4E] flex flex-col items-center justify-center py-5">
-                    <p class="text-center mb-1">Kunjungan Univ Malaysia</p>
-                    <img src="/assets/galeri9.png" alt="Photo of Gallery">
-                </div>
+
+        <div class="bg-[#F4F4F4] mt-10 px-10 py-8 rounded-lg">
+            <div class="flex justify-between font-medium">
+                <div class="bg-[#F0AD4E] text-white py-1 px-7 rounded-md">Akses Online Karya Ilmiah</div>
+                <div class="bg-white border border-[#F0AD4E] py-1 px-7 rounded-md">Akses Online E-book</div>
+                <div class="bg-white border border-[#F0AD4E] py-1 px-7 rounded-md">Reservasi Online</div>
+                <div class="bg-white border border-[#F0AD4E] py-1 px-7 rounded-md">Peminjaman Buku</div>
             </div>
-            <div class="flex items-center justify-center gap-2 mt-5">
-                <button>Prev</button>
-                <button class="border border-[#F0AD4E] px-3 rounded-md">1</button>
-                <button class="bg-[#F0AD4E] border border-[#F0AD4E] px-3 rounded-md">2</button>
-                <button class="border border-[#F0AD4E] px-3 rounded-md">3</button>
-                <button>Next</button>
+            <div class="flex justify-around font-medium mt-5">
+                <div class="bg-white border border-[#F0AD4E] py-1 px-7 rounded-md">Perpanjangan Buku Online</div>
+                <div class="bg-white border border-[#F0AD4E] py-1 px-7 rounded-md">Pengembalian Buku</div>
+                <div class="bg-white border border-[#F0AD4E] py-1 px-7 rounded-md">Prosedur Keterangan Bebas
+                    Perpustakaan</div>
+            </div>
+            <div class="flex justify-between font-medium mt-5">
+                <div class="bg-white border border-[#F0AD4E] py-1 px-7 rounded-md">Unggah File Artikel Tugas Akhir</div>
+                <div class="bg-white border border-[#F0AD4E] py-1 px-7 rounded-md">Approval Tugas Akhir</div>
+                <div class="bg-white border border-[#F0AD4E] py-1 px-7 rounded-md">Upload Buku Karya Dosen</div>
+                <div class="bg-white border border-[#F0AD4E] py-1 px-7 rounded-md">Unggah Karya Akhir</div>
             </div>
         </div>
+
+        <div class="bg-[#F0AD4E] rounded-lg py-5 px-10 mt-10">
+            <h1 class="text-3xl font-bold text-center mb-5">Akses Online Karya Ilmiah</h1>
+            <div class="flex justify-center">
+                <img src="/assets/aksesonline.png" alt="">
+            </div>
+
+        </div>
+
         <div class="grid grid-cols-3 gap-10 mt-10">
             <div class="">
                 <div class="flex gap-2 items-center bg-[#F4F4F4] shadow-md p-3">
@@ -105,7 +87,6 @@
 
             </div>
         </div>
-
         <div class="grid grid-cols-3 gap-10 mt-10">
             <div class="shadow-lg rounded-b-md">
                 <div class="bg-[#F0AD4E] font-bold rounded-t-md text-center">SOSIAL MEDIA</div>
@@ -126,7 +107,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="">
             <div class="shadow-lg mt-10 rounded-b-md">
                 <div class="bg-[#F0AD4E] font-bold rounded-t-md text-center">VIRTUAL TOUR OPEN LIBRARY</div>

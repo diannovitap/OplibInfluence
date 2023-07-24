@@ -1,6 +1,7 @@
 <x-app-layout>
     <div class="p-16">
-        <div class="">
+
+        <div>
             <h1 class="text-3xl font-bold">KATALOG</h1>
             <p class="text-[#FF4500]"><a href="/">Beranda</a> <span class="text-[#585654]">/</span> <a
                     href="{{ route('katalog.index') }}">Katalog</a></p>
@@ -27,8 +28,7 @@
                             <!-- Modal content -->
                             <div class="relative bg-white rounded-lg shadow">
                                 <!-- Modal header -->
-                                <div
-                                    class="flex items-start justify-between p-4 rounded-t dark:border-gray-600">
+                                <div class="flex items-start justify-between p-4 rounded-t dark:border-gray-600">
                                     <h3 class="text-xl font-semibold text-center text-gray-900">
                                         Pencarian Detail Katalog
                                     </h3>
@@ -134,48 +134,50 @@
                                                 <option value="Purwokerto">Purwokerto</option>
                                             </select>
                                         </div>
-                                        <x-input-label class="font-bold mt-1" for="lokasi" :value="__('Tanggal Masuk')" />
+                                        <x-input-label class="font-bold mt-1" for="lokasi"
+                                            :value="__('Tanggal Masuk')" />
                                         <div class="mt-2 flex justify-between">
                                             <div class="">
-                                            <x-input-label class="font-bold" for="lokasi" :value="__('Dari :')" />
+                                                <x-input-label class="font-bold" for="lokasi" :value="__('Dari :')" />
                                                 <div class="relative max-w-sm">
                                                     <!-- <x-input-label class="font-bold" for="lokasi" :value="__('Dari :')" /> -->
                                                     <div
-                                                    class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none mt-1">
-                                                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400"
-                                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                                    fill="currentColor" viewBox="0 0 20 20">
-                                                        <path
-                                                            d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                                                    </svg>
-                                                </div>
-                                                <input datepicker type="text"
-                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
-                                                    placeholder="Select date">
+                                                        class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none mt-1">
+                                                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                                                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                                            fill="currentColor" viewBox="0 0 20 20">
+                                                            <path
+                                                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                                        </svg>
+                                                    </div>
+                                                    <input datepicker type="text"
+                                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
+                                                        placeholder="Select date">
                                                 </div>
                                             </div>
                                             <div class="">
-                                            <x-input-label class="font-bold" for="lokasi" :value="__('Sampai :')" />
+                                                <x-input-label class="font-bold" for="lokasi" :value="__('Sampai :')" />
 
                                                 <div class="relative max-w-sm">
                                                     <!-- <x-input-label class="font-bold" for="lokasi" :value="__('Sampai :')" /> -->
-                                                <div
-                                                    class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none mt-1">
-                                                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400"
-                                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                                        fill="currentColor" viewBox="0 0 20 20">
-                                                        <path
-                                                            d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                                                    </svg>
-                                                </div>
-                                                <input datepicker type="text"
-                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
-                                                    placeholder="Select date">
+                                                    <div
+                                                        class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none mt-1">
+                                                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                                                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                                            fill="currentColor" viewBox="0 0 20 20">
+                                                            <path
+                                                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                                        </svg>
+                                                    </div>
+                                                    <input datepicker type="text"
+                                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
+                                                        placeholder="Select date">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="flex justify-end gap-7 mt-3">
-                                            <button class="border border-[#FF4500] py-2 px-4 rounded-md">Bersihkan</button>
+                                            <button
+                                                class="border border-[#FF4500] py-2 px-4 rounded-md">Bersihkan</button>
                                             <button class="bg-[#FF4500] py-2 px-8 text-white rounded-md">Cari</button>
                                         </div>
                                     </form>
@@ -649,6 +651,229 @@
                 </div>
             </div>
         </div>
+        <div class="flex gap-16 mt-10 p-10 justify-between">
+            <div class="w-8/12">
+                <h1 class="text-2xl font-bold text-[#B22222]">Review</h1>
+                <div class="grid grid-cols-2 gap-8 mt-3">
+                    <div>
+
+                        <div class="flex items-center gap-2">
+                            <img src="/assets/profilereview.png" alt="Photo of Profile">
+                            <p class="font-bold">Muhammad Arya</p>
+                        </div>
+                        <p class="font-semibold text-[#07559F]">Akuntansi Keuangan Menengah 1: Berbasis PSAK</p>
+                        <div class="flex items-center gap-3">
+
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+                            </div>
+                            <div class="text-[#938C8C]">
+                                20/05/2023
+                            </div>
+
+                        </div>
+                        <div class="text-[#938C8C]">“Sangat memuaskan untuk mencari jurnal referensi tugas besar saya. Banyak pilihan jurnal
+                            yang bagus top markotop...”</div>
+                    </div>
+                    <div>
+
+                        <div class="flex items-center gap-2">
+                            <img src="/assets/profilereview.png" alt="Photo of Profile">
+                            <p class="font-bold">Muhammad Arya</p>
+                        </div>
+                        <p class="font-semibold text-[#07559F]">Akuntansi Keuangan Menengah 1: Berbasis PSAK</p>
+                        <div class="flex items-center gap-3">
+
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+                            </div>
+                            <div class="text-[#938C8C]">
+                                20/05/2023
+                            </div>
+
+                        </div>
+                        <div class="text-[#938C8C]">“Sangat memuaskan untuk mencari jurnal referensi tugas besar saya. Banyak pilihan jurnal
+                            yang bagus top markotop...”</div>
+                    </div>
+                    <div>
+
+                        <div class="flex items-center gap-2">
+                            <img src="/assets/profilereview.png" alt="Photo of Profile">
+                            <p class="font-bold">Muhammad Arya</p>
+                        </div>
+                        <p class="font-semibold text-[#07559F]">Akuntansi Keuangan Menengah 1: Berbasis PSAK</p>
+                        <div class="flex items-center gap-3">
+
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+                            </div>
+                            <div class="text-[#938C8C]">
+                                20/05/2023
+                            </div>
+
+                        </div>
+                        <div class="text-[#938C8C]">“Sangat memuaskan untuk mencari jurnal referensi tugas besar saya. Banyak pilihan jurnal
+                            yang bagus top markotop...”</div>
+                    </div>
+                    <div>
+
+                        <div class="flex items-center gap-2">
+                            <img src="/assets/profilereview.png" alt="Photo of Profile">
+                            <p class="font-bold">Muhammad Arya</p>
+                        </div>
+                        <p class="font-semibold text-[#07559F]">Akuntansi Keuangan Menengah 1: Berbasis PSAK</p>
+                        <div class="flex items-center gap-3">
+
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFD233"
+                                    class="w-5 h-5">
+                                    <path fill-rule="evenodd"
+                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                        clip-rule="evenodd" />
+                                </svg>
+
+                            </div>
+                            <div class="text-[#938C8C]">
+                                20/05/2023
+                            </div>
+
+                        </div>
+                        <div class="text-[#938C8C]">“Sangat memuaskan untuk mencari jurnal referensi tugas besar saya. Banyak pilihan jurnal
+                            yang bagus top markotop...”</div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                    <h1 class="text-2xl font-bold text-[#B22222] text-left">Subjek Populer</h1>
+                <ul class="mt-3">
+                    <li>WEB PROGRAMMING (1806)</li>
+                    <li>Transmisi Telkom (1285)</li>
+                    <li>#N/A (1268)</li>
+                    <li>SCIENCE FICTION (1228)</li>
+                    <li>ACCOUNTING (1191)</li>
+                    <li>NOVELS (1172)</li>
+                    <li>ARTIFICIAL INTELLIGENCE (1133)</li>
+                    <li>Rekayasa Perangkat Lunak (1131)</li>
+                    <li>Informatika Teori dan Pemrograman (1013)</li>
+                    <li>Jaringan Multimedia (952)</li>
+                </ul>
+            </div>
+        </div>
+
     </div>
     <div class="bg-[#F0AD4E]">
         <h1 class="flex items-center justify-center text-2xl font-bold text-white" style="height: 10vh;">

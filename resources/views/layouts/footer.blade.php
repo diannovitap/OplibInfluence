@@ -1,6 +1,9 @@
 <footer>
     <div class="p-10">
-        <h1 class="text-3xl font-bold">LOKASI PERPUSTAKAAN</h1>
+        <hr class="items-center border-2 border-[#F0AD4E] mt- mb-10 -mx-3 ">
+        <div class="px-4">
+            <h1 class="text-3xl font-bold text-[#B22222]">LOKASI PERPUSTAKAAN</h1>
+        </div>
 
         <div class="grid grid-cols-4 gap-3 mt-5">
             <div class="relative h-60">

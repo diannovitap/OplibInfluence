@@ -17,14 +17,61 @@
             <div class="flex items-center font-bold gap-4">
                 <div>
                     <ul class="flex gap-4">
+                        @auth
+                        <li>
+                            <button id="dropdownDefaultButtons" data-dropdown-toggle="dropdowns"
+                                class="flex items-center" type="button">BERANDA
+                                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                        </li>
+                        <div id="dropdowns"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                            <ul class="py-2 text-sm" aria-labelledby="dropdownDefaultButtons">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-[#FF4500] dark:hover:text-white">Beranda</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('opencourseware.index')}}"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-[#FF4500] dark:hover:text-white">Full
+                                        Site</a>
+                                </li>
+                            </ul>
+                        </div>
+                        @else
                         <li class="cursor-pointer"><a href="/">BERANDA</a></li>
+                        @endif
                         <li class="cursor-pointer"><a href="{{route('katalog.index')}}">KATALOG</a></li>
                         <li class="cursor-pointer">E-PUBLICATION</li>
                         <li class="cursor-pointer"><a href="{{route('gallery.index')}}">GALLERY</a></li>
-                        <li class="cursor-pointer">INFOGRAFIS</li>
-                        <li class="cursor-pointer flex items-center">LAINNYA
-                            <img src="/assets/dropdown.png" alt="">
-                        </li>
+                        <li class="cursor-pointer"><a href="{{route('infografis.index')}}">INFOGRAFIS</a></li>
+
+                        <li><button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="flex items-center"
+                                type="button">LAINNYA
+                                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg></button></li>
+                        <!-- Dropdown menu -->
+                        <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                            <ul class="py-2 text-sm" aria-labelledby="dropdownDefaultButton">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-[#FF4500] dark:hover:text-white">Tel-u
+                                        Press</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('opencourseware.index')}}"
+                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-[#FF4500] dark:hover:text-white">Tel-u
+                                        Open Courseware</a>
+                                </li>
+                            </ul>
+                        </div>
                     </ul>
                 </div>
                 @auth
@@ -38,12 +85,12 @@
                                     {{ Auth::user()->name }}</div>
 
                                 <div class="ml-1">
-                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd"
-                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                            clip-rule="evenodd" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="#B22222" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
                                     </svg>
+
                                 </div>
                             </button>
                         </x-slot>
@@ -68,11 +115,11 @@
                 @else
                 <div>
                     <a href="/login"><button
-                            class="bg-white px-3 py-1 font-bold border-2 rounded-lg border-[#FF4500]">LOGIN</button>
+                            class="bg-white px-3 py-1 font-bold border-2 rounded-lg border-[#FF4500] shadow-lg">LOGIN</button>
                     </a>
                     <a href="/register">
                         <button
-                            class="bg-[#FF4500] text-white px-3 py-1 font-bold border-2 rounded-lg border-[#FF4500]">SIGN
+                            class="bg-[#FF4500] text-white px-3 py-1 font-bold border-2 rounded-lg border-[#FF4500] shadow-lg">SIGN
                             UP</button></a>
                 </div>
                 @endif
@@ -96,12 +143,6 @@
     @auth
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
-            </x-responsive-nav-link>
-        </div>
-
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="px-4">

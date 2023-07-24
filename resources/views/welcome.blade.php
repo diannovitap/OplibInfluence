@@ -36,7 +36,6 @@
     </section>
 
     <section class="h-fit min-h-screen bg-[#F0AD4E] p-10">
-        <div class="">
             <div>
 
                 <div class="flex items-center justify-between">
@@ -585,6 +584,111 @@
                 <button class="w-7 h-7 bg-white rounded-full">
                     <i class="fa-solid fa-angles-right"></i>
                 </button>
+            </div>
+    </section>
+
+    <section class="h-fit p-10 flex justify-between">
+        <div class="w-3/12">
+            <h1 class="text-2xl font-bold text-[#B22222]">News</h1>
+                <ul class="mt-2">
+                    <li>
+                        <p class="font-medium">Library Newsletter | Tel-U<br>Open Library, Juni 2023</p>
+                        <div class="bg-[#F0AD4E] text-white font-semibold rounded-md w-fit px-2">
+                        30 Juni 2023
+                        </div>
+                    </li>
+                    <li class="mt-2">
+                        <p class="font-medium">Library Newsletter | Tel-U Open Library, Juni 2023</p>
+                        <div class="bg-[#F0AD4E] text-white font-semibold rounded-md w-fit px-2">
+                        29 Mei 2023
+                        </div>
+                    </li>
+                    <li class="mt-2">
+                        <p class="font-medium">Layanan Digital Reading Area (Akses Kindle)</p>
+                        <div class="bg-[#F0AD4E] text-white font-semibold rounded-md w-fit px-2">
+                        25 Mei 2023
+                        </div>
+                    </li>
+                    <li class="mt-2">
+                        <p class="font-medium">Layanan Digital Reading Area (Akses Kindle)</p>
+                        <div class="bg-[#F0AD4E] text-white font-semibold rounded-md w-fit px-2">
+                        28 April 2023
+                        </div>
+                    </li>
+                    <li class="mt-2">
+                        <p class="font-medium">User Guide, Jenis Dokumen yang harus diupload di Open Library</p>
+                        <div class="bg-[#F0AD4E] text-white font-semibold rounded-md w-fit px-2">
+                        12 April 2023
+                        </div>
+                    </li>
+                </ul>
+        </div>
+        <div>
+            <h1 class="text-2xl font-bold text-[#B22222]">Informasi Penting</h1>
+            <div class="flex-col flex gap-2 font-medium mt-2">
+                <div class="text-[#07559F]">
+                    Peraturan Tel-U Open Library
+                </div>
+                <div class="text-[#07559F]">
+                Open Library Member Survival Guide
+                </div>
+                <div class="text-[#07559F]">
+                Formulir Pengajuan Bahan Pustaka
+                </div>
+                <div class="text-[#07559F]">
+                SK Logo dan Sistem Open Library
+                </div>
+                <div class="text-[#07559F]">
+                Kelas Literasi
+                </div>
+                <div class="text-[#07559F]">
+                Akses e-Journal menggunakan MyLOFT
+                </div>
+                <div class="text-[#07559F]">
+                Tata Cara Upload Bahan Ajar
+                </div>
+                <div class="text-[#07559F]">
+                Peminjaman Buku melalui Delivery Service
+                </div>
+                <div class="text-[#07559F]">
+                User Guide Author dan Reviewer Jurnal TELKATIKA
+                </div>
+                <div class="text-[#07559F]">
+                Layanan Document Delivery Service
+                </div>
+                <div class="text-[#07559F]">
+                Cara Akses Koleksi Electronic Book Open Library
+                </div>
+                <div class="text-[#07559F]">
+                Standar Layanan Open Library
+                </div>
+                <div class="text-[#07559F]">
+                Cara Akses Scopus
+                </div>
+                <div class="text-[#07559F]">
+                Fasilitas Cek Similarity, iThenticate dan Turnitin
+                </div>
+                <div class="text-[#07559F]">
+                Layanan Assistive Technology
+                </div>
+                <div class="text-[#07559F]">
+                Open Library Book Review Competition
+                </div>
+                <div class="text-[#07559F]">
+                Surat Bebas Kewajiban Perpustakaan (SBKP)
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1 class="text-2xl font-bold text-[#B22222]">E-Journal, E-book & Magazine</h1>
+            <div class="flex gap-4 mt-2">
+                <div>
+                    <img src="/assets/ejournal.png" alt="Photo of E-Journal">
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <img src="/assets/ebook.png" alt="Photo of E-Book">
+                    <img src="/assets/magazine.png" alt="Photo of Magazine">
+                </div>
             </div>
         </div>
     </section>
