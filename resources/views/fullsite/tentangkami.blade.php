@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-fullsite-layout>
     <div class="p-16">
         <div>
             <h1 class="text-3xl font-bold">TENTANG KAMI</h1>
@@ -191,4 +191,4 @@
         <hr class="items-center border-2 border-[#F0AD4E] mt-16 -mx-4">
     </div>
     @include('layouts.footer')
-</x-app-layout>
+</x-fullsite-layout>

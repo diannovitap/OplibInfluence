@@ -31,7 +31,7 @@
                             class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
                             <ul class="py-2 text-sm" aria-labelledby="dropdownDefaultButtons">
                                 <li>
-                                    <a href="#"
+                                    <a href="/"
                                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-[#FF4500] dark:hover:text-white">Beranda</a>
                                 </li>
                                 <li>
@@ -41,33 +41,13 @@
                                 </li>
                             </ul>
                         </div>
-                        <li class="cursor-pointer"><a href="{{route('katalog.index')}}">KATALOG</a></li>
-                        <li class="cursor-pointer">E-PUBLICATION</li>
-                        <li class="cursor-pointer"><a href="{{route('gallery.index')}}">GALLERY</a></li>
-                        <li class="cursor-pointer"><a href="{{route('infografis.index')}}">INFOGRAFIS</a></li>
-
-                        <li><button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="flex items-center"
-                                type="button">LAINNYA
-                                <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 10 6">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 1 4 4 4-4" />
-                                </svg></button></li>
-                        <!-- Dropdown menu -->
-                        <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
-                            <ul class="py-2 text-sm" aria-labelledby="dropdownDefaultButton">
-                                <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-[#FF4500] dark:hover:text-white">Tel-u
-                                        Press</a>
-                                </li>
-                                <li>
-                                    <a href="{{route('opencourseware.index')}}"
-                                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-[#FF4500] dark:hover:text-white">Tel-u
-                                        Open Courseware</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <li class="cursor-pointer"><a href="{{route('katalog.fullsite')}}">KATALOG</a></li>
+                        <li class="cursor-pointer"><a href="{{route('keanggotaan.fullsite')}}">KEANGGOTAAN</a></li>
+                        <li class="cursor-pointer"><a href="{{route('dokumen.fullsite')}}">DOKUMEN</a></li>
+                        <li class="cursor-pointer"><a href="{{route('laporan.fullsite')}}">LAPORAN MAGANG & KP</a></li>
+                        <li class="cursor-pointer"><a href="{{route('informasi.fullsite')}}">INFORMASI</a></li>
+                        <li class="cursor-pointer"><a href="{{route('tentangkami.fullsite')}}">TENTANG KAMI</a></li>
+                        <li class="cursor-pointer"><a href="{{route('tahunterbit.fullsite')}}">TAHUN TERBIT</a></li>
                     </ul>
                 </div>
                 @auth
