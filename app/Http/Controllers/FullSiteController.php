@@ -31,7 +31,11 @@ class FullSiteController extends Controller
     }
 
     public function informasi(){
-        return view('fullsite.informasi');
+        return view('fullsite.informasi.index');
+    }
+
+    public function tentangkami(){
+        return view('fullsite.tentangkami');
     }
 
     public function tahunterbit(){
