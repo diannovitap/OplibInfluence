@@ -6,6 +6,7 @@ use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\InfografisController;
 use App\Http\Controllers\InformasiController;
 use App\Http\Controllers\OpenCoursewareController;
+use App\Http\Controllers\TentangKamiController;
 use App\Http\Controllers\FullSiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +32,7 @@ Route::get('/katalog/detail', [KatalogController::class, 'detail'])->name('katal
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
 Route::get('/infografis', [InfografisController::class, 'index'])->name('infografis.index');
 Route::get('/opencourseware', [OpenCoursewareController::class, 'index'])->name('opencourseware.index');
+Route::get('/tentangkami', [TentangKamiController::class, 'tentangkami'])->name('tentangkami.index');
 
 // Full Site
 Route::get('/fullsite/katalog', [FullSiteController::class, 'katalog'])->name('katalog.fullsite');

@@ -32,7 +32,7 @@
                         <text x="2.4" y="1" text-anchor="right" font-size="1.3" fill="none" stroke-width=".025"
                             stroke="#FF4500" font-family="sans-serif">MEMBACA</text>
                     </svg></h1>
-                <a href="{{route('tentangkami.fullsite')}}"><button class="border-2 border-[#FF4500] text-white p-2 -mt-3">TENTANG KAMI</button></a>
+                <a href="{{route('tentangkami.index')}}"><button class="border-2 border-[#FF4500] text-white p-2 -mt-3">TENTANG KAMI</button></a>
             </div>
         </div>
 
