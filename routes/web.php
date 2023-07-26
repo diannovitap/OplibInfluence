@@ -25,6 +25,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/register', function () {
+    return view('auth.register');
+});
+
 
 Route::get('/katalog', [KatalogController::class, 'index'])->name('katalog.index');
 Route::get('/katalog/detail', [KatalogController::class, 'detail'])->name('katalog.detail');

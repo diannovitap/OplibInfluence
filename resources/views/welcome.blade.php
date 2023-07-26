@@ -86,14 +86,9 @@
                                             <select class="w-full text-sm rounded-md border border-[#F0AD4E]"
                                                 name="jeniskatalog" id="jeniskatalog">
                                                 <option value="">Pilih Jenis Katalog</option>
-                                                <option value="Institut Teknologi Telkom Surabaya">Institut
-                                                    Teknologi
-                                                    Telkom Surabaya</option>
-                                                <option value="Institut Teknologi Telkom Jakarta">Institut Teknologi
-                                                    Telkom Jakarta</option>
-                                                <option value="Institut Teknologi Telkom Purwokerto">Institut
-                                                    Teknologi
-                                                    Telkom Purwokerto</option>
+                                                <option value="Karya Ilmiah - Skripsi - Reference">Karya Ilmiah - Skripsi S1 - Reference</option>
+                                                <option value="Karya Ilmiah - Skripsi - Reference">Karya Ilmiah - Skripsi S1 - Reference</option>
+                                                <option value="Karya Ilmiah - Skripsi - Reference">Karya Ilmiah - Skripsi S1 - Reference</option>
                                             </select>
                                         </div>
                                         <div class="mt-2">
@@ -123,7 +118,7 @@
                                             <x-input-error :messages="$errors->get('pengarang')" class="mt-2" />
                                         </div>
                                         <div class="mt-2">
-                                            <x-input-label class="font-bold" for="penerbit" :value="__('Peneribit')" />
+                                            <x-input-label class="font-bold" for="penerbit" :value="__('Penerbit')" />
                                             <input id="penerbit"
                                                 class="block text-sm mt-1 w-full border border-[#F0AD4E] rounded-md"
                                                 type="text" name="penerbit" :value="old('penerbit')" required autofocus
@@ -164,7 +159,7 @@
                                             <select class="w-full text-sm rounded-md border border-[#F0AD4E]"
                                                 name="lokasi" id="lokasi">
                                                 <option value="">Lokasi</option>
-                                                <option value="Bandung">Bandung</option>
+                                                <option value="Tel-U Gedung FKB">Tel-U Gedung FKB</option>
                                                 <option value="Jakarta">Jakarta</option>
                                                 <option value="Purwokerto">Purwokerto</option>
                                             </select>
@@ -213,7 +208,7 @@
                                         <div class="flex justify-end gap-7 mt-3">
                                             <button
                                                 class="border border-[#FF4500] py-2 px-4 rounded-md">Bersihkan</button>
-                                            <button class="bg-[#FF4500] py-2 px-8 text-white rounded-md">Cari</button>
+                                           <a class="bg-[#FF4500] py-2 px-8 text-white rounded-md" href="{{route('katalog.detail')}}">Cari</a>
                                         </div>
                                     </form>
                                 </div>

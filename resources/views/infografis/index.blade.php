@@ -33,7 +33,7 @@
 
                 <div id="animation-carousel" class="relative w-full" data-carousel="static">
                     <!-- Carousel wrapper -->
-                    <div class="relative overflow-hidden rounded-lg" style="height: 95vh;">
+                    <div class="relative overflow-hidden rounded-lg" style="height: 100vh;">
                         <!-- Item 1 -->
                         <div class="hidden duration-200 ease-linear" data-carousel-item="active" id="aksesonlinekaryailmiah">
                             <h1 class="text-3xl font-bold text-center mb-5">Akses Online Karya Ilmiah</h1>
