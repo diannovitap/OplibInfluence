@@ -2,8 +2,8 @@
     <div class="p-16">
         <div>
             <h1 class="text-3xl font-bold">TENTANG KAMI</h1>
-            <p class="text-[#FF4500]"><a href="/">Beranda</a> <span class="text-[#585654]">/</span> <a
-                    href="{{ route('tentangkami.index') }}">Tentang Kami</a></p>
+            <p class="text-[#FF4500]"><a href="{{route('katalog.fullsite')}}">Beranda</a> <span class="text-[#585654]">/</span> <a
+                    href="{{ route('tentangkami.fullsite') }}">Tentang Kami</a></p>
         </div>
         <div class="bg-[#F4F4F4] mt-10 px-14 py-8 rounded-lg">
             <h1 class="text-3xl font-bold text-center mb-5">Tentang Kami</h1>
