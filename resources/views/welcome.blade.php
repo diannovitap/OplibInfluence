@@ -27,7 +27,7 @@
         <div class="absolute top-0 h-screen w-full" style="background-color: rgba(255, 255, 255, 0.5)">
             @include('layouts.navigation')
             <div class="text-right absolute top-1/2 right-24 font-bold">
-                <h1 class="text-6xl font-bold text-white">BUDAYAKAN <br>
+                <h1 class="text-6xl font-bold text-white">BUDAYAKAN<br>
                     <svg class="-mr-6" viewbox="0 0 10 2">
                         <text x="2.4" y="1" text-anchor="right" font-size="1.3" fill="none" stroke-width=".025"
                             stroke="#FF4500" font-family="sans-serif">MEMBACA</text>
