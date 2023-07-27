@@ -114,7 +114,7 @@
                 <div class="mt-3 hidden" id="ktp">
                     <x-input-label for="ktp" :value="__('KTP')" />
                     <div class="border-gray-300 border text-sm shadow-sm p-2 rounded-md mt-1">
-                        <input class="active:border-0" name="ktp" type="file" value="">
+                        <input class="active:border-0" name="ktp" type="file">
                     </div>
                     <x-input-label for="ktp" :value="__('Format : jpg, jpeg, png, pdf;  Maksimal size : 2 MB')" />
                 </div>
@@ -138,7 +138,7 @@
                 <div
                     class="flex items-center justify-between mt-3 bg-[#F5F5F5] w-7/12 px-4 py-4 border rounded-lg border-[#938C8C]">
                     <div class="flex items-center gap-2">
-                        <input name="imnotrobot" type="checkbox">
+                        <input name="imnotrobot" type="checkbox" value="check">
                         <label for="imnotrobot"> I'm, not robot</label>
                     </div>
                     <img src="/assets/recaptcha.png" alt="reCAPTCHA image">
