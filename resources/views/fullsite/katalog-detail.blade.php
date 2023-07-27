@@ -146,6 +146,15 @@
                     </div>
                 </div>
                 <div class="">
+                    @auth
+                    <a href="{{route('katalogdetaildownload.fullsite')}}">
+                        <button
+                        class="bg-white border border-[#0E9302] flex items-center gap-2 h-fit font-bold py-1 px-2 rounded-md">
+                        <i class="fa-solid fa-download"></i>
+                        <p>Download / Flippingbook</p>
+                    </button>
+                </a>
+                    @else
                     <button data-modal-target="popup-modals" data-modal-toggle="popup-modals"
                         class="bg-white border border-[#0E9302] flex items-center gap-2 h-fit font-bold py-1 px-2 rounded-md">
                         <i class="fa-solid fa-download"></i>
@@ -184,6 +193,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                     <ul class="mt-3">
                         <li class="leading-tight">
                             <p class="font-bold text-[#07559F]">A. Letter of Acceptance (LoA.pdf)</p>

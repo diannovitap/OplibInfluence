@@ -17,9 +17,10 @@
             <div class="flex items-center font-bold gap-4">
                 <div>
                     <ul class="flex gap-4">
+                        @auth
                         <li>
                             <button id="dropdownDefaultButtons" data-dropdown-toggle="dropdowns"
-                                class="flex items-center" type="button">BERANDA
+                                class="flex items-center text-[#B22222]" type="button">BERANDA
                                 <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                     fill="none" viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -41,6 +42,9 @@
                                 </li>
                             </ul>
                         </div>
+                        @else
+                        <li class="cursor-pointer text-[#B22222]"><a href="/">BERANDA</a></li>
+                        @endif
                         <li class="cursor-pointer"><a href="{{route('katalog.index')}}">KATALOG</a></li>
                         <li class="cursor-pointer">E-PUBLICATION</li>
                         <li class="cursor-pointer"><a href="{{route('gallery.index')}}">GALLERY</a></li>
@@ -81,11 +85,19 @@
                                     {{ Auth::user()->name }}</div>
 
                                 <div class="ml-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                        stroke-width="1.5" stroke="#B22222" class="w-6 h-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
-                                    </svg>
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        
+                                        <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
+                                                        this.closest('form').submit();">
+                                            
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="#B22222" class="w-6 h-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+                                            </svg>
+                                        </x-dropdown-link>
+                                    </form>
 
                                 </div>
                             </button>
@@ -97,14 +109,6 @@
                             </x-dropdown-link>
 
                             <!-- Authentication -->
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
-
-                                <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                    {{ __('Log Out') }}
-                                </x-dropdown-link>
-                            </form>
                         </x-slot>
                     </x-dropdown>
                 </div>
