@@ -65,7 +65,7 @@
                 <div class="flex items-center justify-center font-medium mt-2 gap-1">
                     <p>Belum mempunyai akun?</p>
                     <a class="text-sm hover:text-gray-900 text-[#B22222] rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                        href="{{ route('register') }}">
+                        href="/register">
                         {{ __('Sign up') }}
                     </a>
                 </div>
