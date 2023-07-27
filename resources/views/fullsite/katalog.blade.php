@@ -175,7 +175,7 @@
                                         <div class="flex justify-end gap-7 mt-3">
                                             <button
                                                 class="border border-[#FF4500] py-2 px-4 rounded-md">Bersihkan</button>
-                                            <a class="bg-[#FF4500] py-2 px-8 text-white rounded-md" href="{{route('katalog.detail')}}">Cari</a>
+                                            <a class="bg-[#FF4500] py-2 px-8 text-white rounded-md" href="{{route('katalog.fullsite')}}">Cari</a>
                                         </div>
                                     </form>
                                 </div>

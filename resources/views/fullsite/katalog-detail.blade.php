@@ -196,43 +196,43 @@
                     @endif
                     <ul class="mt-3">
                         <li class="leading-tight">
-                            <p class="font-bold text-[#07559F]">A. Letter of Acceptance (LoA.pdf)</p>
+                            <a href="{{route('katalogdetaildownload.fullsite')}}"><p class="font-bold text-[#07559F]">A. Letter of Acceptance (LoA.pdf)</p></a>
                             belum pernah diunduh
                         </li>
                         <li class="leading-tight">
-                            <p class="font-bold text-[#07559F]">B. Cover (cover.pdf)</p>
+                        <a href="{{route('katalogdetaildownload.fullsite')}}"><p class="font-bold text-[#07559F]">B. Cover (cover.pdf)</p></a>
                             belum pernah diunduh
                         </li>
                         <li class="leading-tight">
-                            <p class="font-bold text-[#07559F]">C. Disclaimer (disclaimer.pdf)</p>
+                            <a href="{{route('katalogdetaildownload.fullsite')}}"><p class="font-bold text-[#07559F]">C. Disclaimer (disclaimer.pdf)</p></a>
                             belum pernah diunduh
                         </li>
                         <li class="leading-tight">
-                            <p class="font-bold text-[#07559F]">D. Lembar Pengesahan (lembarpengesahan.pdf)</p>
+                            <a href="{{route('katalogdetaildownload.fullsite')}}"><p class="font-bold text-[#07559F]">D. Lembar Pengesahan (lembarpengesahan.pdf)</p></a>
                             belum pernah diunduh
                         </li>
                         <li class="leading-tight">
-                            <p class="font-bold text-[#07559F]">E. Abstrak (abstraksi.pdf)</p>
+                            <a href="{{route('katalogdetaildownload.fullsite')}}"><p class="font-bold text-[#07559F]">E. Abstrak (abstraksi.pdf)</p></a>
                             belum pernah diunduh
                         </li>
                         <li class="leading-tight">
-                            <p class="font-bold text-[#07559F]">F. Kata Pengantar (kpdi.pdf)</p>
+                            <a href="{{route('katalogdetaildownload.fullsite')}}"><p class="font-bold text-[#07559F]">F. Kata Pengantar (kpdi.pdf)</p></a>
                             belum pernah diunduh
                         </li>
                         <li class="leading-tight">
-                            <p class="font-bold text-[#07559F]">G. BAB 1 (bab1.pdf)</p>
+                            <a href="{{route('katalogdetaildownload.fullsite')}}"><p class="font-bold text-[#07559F]">G. BAB 1 (bab1.pdf)</p></a>
                             belum pernah diunduh
                         </li>
                         <li class="leading-tight">
-                            <p class="font-bold text-[#07559F]">H. BAB 2 (bab2.pdf)</p>
+                           <a href="{{route('katalogdetaildownload.fullsite')}}"><p class="font-bold text-[#07559F]">H. BAB 2 (bab2.pdf)</p></a>
                             belum pernah diunduh
                         </li>
                         <li class="leading-tight">
-                            <p class="font-bold text-[#07559F]">I. BAB 3 (bab3.pdf)</p>
+                            <a href="{{route('katalogdetaildownload.fullsite')}}"><p class="font-bold text-[#07559F]">I. BAB 3 (bab3.pdf)</p></a>
                             belum pernah diunduh
                         </li>
                         <li class="leading-tight">
-                            <p class="font-bold text-[#07559F]">J. BAB 4 (bab4.pdf)</p>
+                            <a href="{{route('katalogdetaildownload.fullsite')}}"><p class="font-bold text-[#07559F]">J. BAB 4 (bab4.pdf)</p></a>
                             belum pernah diunduh
                         </li>
                     </ul>
