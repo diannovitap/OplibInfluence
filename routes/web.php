@@ -38,6 +38,7 @@ Route::get('/infografis', [InfografisController::class, 'index'])->name('infogra
 Route::get('/opencourseware', [OpenCoursewareController::class, 'index'])->name('opencourseware.index');
 Route::get('/tentangkami', [TentangKamiController::class, 'tentangkami'])->name('tentangkami.index');
 
+Route::middleware(['auth', 'verified'])->group(function () {
 // Full Site
 Route::get('/fullsite/katalog', [FullSiteController::class, 'katalog'])->name('katalog.fullsite');
 Route::get('/fullsite/katalog/detail', [FullSiteController::class, 'katalogDetail'])->name('katalogdetail.fullsite');
@@ -65,6 +66,5 @@ Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit')
 Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     
-    Route::middleware(['auth', 'verified'])->group(function () {
 });
 require __DIR__.'/auth.php';
